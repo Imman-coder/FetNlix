@@ -12,14 +12,10 @@ function Row({title,fetchUrl,is_large}) {
     useEffect(() => {
       async function fetchData(){
         const request = await axios.get(fetchUrl)
-        .then((request) => {
             setMovies(request.data.results);
             setLoading(false);
             return request;
-        })
-        .catch(error =>{
-            console.log(error.response);
-        })
+
       }
       fetchData();
     },[fetchUrl])
