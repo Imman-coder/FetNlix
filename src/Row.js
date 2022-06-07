@@ -14,6 +14,7 @@ function Row({title,fetchUrl,is_large}) {
         const request = await axios.get(fetchUrl)
             setMovies(request.data.results);
             setLoading(false);
+            console.table(movies)
             return request;
       }
       fetchData();
@@ -22,7 +23,6 @@ function Row({title,fetchUrl,is_large}) {
     if (loading) {
         return <p>Data is loading...</p>;
       }
-    console.table(movies)
     if (!loading) {
     return (
         <div className='row'>
