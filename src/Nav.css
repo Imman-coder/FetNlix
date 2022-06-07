@@ -1,0 +1,24 @@
+.logoes{
+    height: 30px;
+    left: 20px;
+}
+
+.profiles{
+    height:30px;
+    position:fixed;
+    right: 20px;
+}
+
+.topbar{
+    display:flex;
+    position:fixed;
+    justify-content:space-between;
+    align-items:center;
+    padding: 10px 20px;
+    width: 97.7%;
+    z-index:1;
+}
+
+.nav_black{
+    background-color: #111;
+}

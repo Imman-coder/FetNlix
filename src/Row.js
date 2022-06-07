@@ -9,10 +9,14 @@ function Row({title,fetchUrl,is_large}) {
     const [movies,setMovies] = useState([])
     useEffect(() => {
       async function fetchData(){
-        const request = await axios.get(fetchUrl);
-        setMovies(request.data.results)
-        
-        return request;
+        const request = await axios.get(fetchUrl)
+        .then((request) => {
+            setMovies(request.data.results);
+            return request;
+        })
+        .catch(error =>{
+            console.log(error.response)
+        })
       }
       fetchData();
     },[fetchUrl])

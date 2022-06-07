@@ -2,10 +2,12 @@
     color: white;
     object-fit: contain;
     height: 448px;
+    display: flex;
 }
 
 .banner_content{
     margin-left: 30px;
+    align-content: center;
 }
 
 .banner_title{
