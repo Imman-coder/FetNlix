@@ -8,7 +8,6 @@ import Nav from './Nav';
 function App() {
   return (
     <div className="App">
-      {/* <h>Fetnlix</h> */}
       <Nav/>
       <Banner/>
       <Row title="NETFLIX ORIGINALS" fetchUrl={requests.fetchNetflixOriginals} is_large/>

@@ -19,12 +19,12 @@ function Banner() {
             })
             .catch(error =>{
               console.log(error.response)
-            })
+            },[])
         }
     fetchData();
 
-    }, [base_url])
-    // console.log(movie)
+    }, [])
+    // console.table(movie)
 
     const truncate = (str, n) => {
 		return str?.length > n ? str.substr(0, n - 1) + "..." : str;

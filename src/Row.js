@@ -7,23 +7,16 @@ const base_url = "http://image.tmdb.org/t/p/original/"
 function Row({title,fetchUrl,is_large}) {
 
     const [movies,setMovies] = useState([]);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
       async function fetchData(){
         const request = await axios.get(fetchUrl)
             setMovies(request.data.results);
-            setLoading(false);
             console.log(movies)
             return request;
       }
       fetchData();
     },[fetchUrl])
-
-    if (loading) {
-        return <p>Data is loading...</p>;
-      }
-    if (!loading) {
     return (
         <div className='row'>
             <h2>{title}</h2>
@@ -36,7 +29,7 @@ function Row({title,fetchUrl,is_large}) {
                 ))}
             </div>
         </div>
-    );}
+    );
 }
 
 export default Row;
