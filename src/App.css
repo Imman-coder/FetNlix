@@ -1,3 +1,17 @@
 *{
   margin:o;
 }
+html{
+  background-color: #111;
+}
+h2{
+  color:white;
+}
+
+.footer{
+  color:white;
+  padding:7px;
+  display: flex;
+  justify-content: center;
+  font-size:.7rem;
+}

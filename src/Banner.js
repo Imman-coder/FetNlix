@@ -12,15 +12,19 @@ function Banner() {
     useEffect(() => {
       async function fetchData(){
             const request = await axios.get(requests.fetchNetflixOriginals)
-            // console.log(request.data.results)
-            const p =request.data.results[ Math.floor(Math.random()*(request.data.results.length-1))];
-            setMovies(p)
-            return request;
+            .then((request) => {
+              const p =request.data.results[ Math.floor(Math.random()*(request.data.results.length-1))];
+              setMovies(p)
+              return request;
+            })
+            .catch(error =>{
+              console.log(error.response)
+            },[])
         }
     fetchData();
 
     }, [])
-    console.log(movie)
+    // console.table(movie)
 
     const truncate = (str, n) => {
 		return str?.length > n ? str.substr(0, n - 1) + "..." : str;
@@ -44,9 +48,6 @@ function Banner() {
         </div>
         <h1 className="banner_description"> {truncate(movie?.overview, 150)} </h1>
         </div>
-        {/* {Witcher} */}
-        {/* {two buttons} */}
-        {/* {description} */}
     </header>
   )
 }
