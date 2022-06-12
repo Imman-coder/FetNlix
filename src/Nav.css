@@ -20,5 +20,6 @@
 }
 
 .nav_black{
-    background-color: #111;
+    /* background-color: #111111; */
+    opacity:1
 }
