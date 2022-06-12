@@ -18,7 +18,7 @@ function App() {
       <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies}/>
       <Row title="Documentaries" fetchUrl={requests.fetchDocumantaries}/>
       <div className="footer">
-        <a>@Created by Immanuel Mundary</a>
+        <a>@Created by Immanuel Mundary #Prod</a>
         </div>
       
     </div>
